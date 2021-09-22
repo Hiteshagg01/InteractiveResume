@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #eee;
+    line-height: 1.75;
+}
+
+h5 {
+    margin: 1rem 0;
+    font-size: 1rem;
+    height: 1rem;
+}
+
+.top {
+    background: no-repeat center right fixed url(https://images2.alphacoders.com/114/1142011.jpg);
+    /* http://3.bp.blogspot.com/-Wpnqbh3dVLA/UKJ03eZpLPI/AAAAAAAAEig/3jBFu5izGb4/s1600/3.jpg); */
+    height: 100vh;
+    background-size: cover;
+}
+
+.headsup {
+    position: relative;
+    top: 30%;
+    z-index: 4;
+    width: fit-content;
+}
+
+.headsup h1 {
+    font-weight: 700;
+    color: #ffffff;
+    padding: 1rem;
+    border-bottom: 1px solid #fff;
+    font-size: 4rem;
+    letter-spacing: 0.25rem;
+}
+
+.headsup p {
+    font-weight: 400;
+    font-size: 1.75rem;
+    color: #ffffff;
+    padding: 1rem;
+    letter-spacing: 0.25rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #22A39F;
+    opacity: 0.75;
+    z-index: 2;
+}
+
+.indicator {
+    position: absolute;
+    z-index: 4;
+    bottom: 1rem;
+    right: 0;
+    left: 0;
+    color: #fff;
+}
+
+.tiles {
+    display: grid;
+    background-color: #eee;
+    max-width: 50%;
+    margin: auto;
+}
+
+.tiles h2 {
+    font-size: 3.25rem;
+    font-weight: 300;
+    margin: 1.25rem;
+    color: #22A39F;
+}
+
+.tiles p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 1rem;
+}
+
+.tile-card h3 {
+    font-size: 1.75rem;
+    text-align: left;
+    font-weight: 300;
+    color: #22A39F;
+    margin: 1rem 0.5rem;
+}
+
+.tile-card p {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 400;
+    margin: 1rem 0.5rem;
+}
+
+.column {
+    padding: 2rem 1rem;
+}
+
+.progress {
+    margin: 1rem 0.25rem;
+}
+
+.card {
+    margin: 2rem auto 5rem;
+    width: 80%;
+}
+
+footer {
+    padding: 5rem;
+    margin-top: 2rem;
+    background-color: #22A39F;
+    color: #fff;
+}
+
+footer a {
+    margin: 1rem;
+    text-decoration: none;
+    color: #fff;
+    cursor: auto;
+}
+
+footer a:hover {
+    color: #f1f1f1;
+}
+
+@media (max-width: 850px) {
+    .top {
+        background: no-repeat center right fixed url(./images/gojosatoru_by_marcechan_fullview.jpg);
+        background-size: cover;
+    }
+    .headsup h1 {
+        font-size: 2.5rem;
+    }
+    .headsup p {
+        font-size: 1rem;
+    }
+    .tiles {
+        max-width: 90%;
+    }
+    .tiles h2 {
+        font-size: 2.5rem;
+    }
+    .tiles p {
+        font-size: 1rem;
+    }
+    footer {
+        padding: 5rem 2rem;
+    }
+}
