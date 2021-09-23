@@ -16,6 +16,10 @@ h5 {
     height: 1rem;
 }
 
+.hidden {
+    display: none;
+}
+
 .top {
     background: no-repeat center right fixed url(https://images2.alphacoders.com/114/1142011.jpg);
     /* http://3.bp.blogspot.com/-Wpnqbh3dVLA/UKJ03eZpLPI/AAAAAAAAEig/3jBFu5izGb4/s1600/3.jpg); */
@@ -65,13 +69,62 @@ h5 {
     right: 0;
     left: 0;
     color: #fff;
+    animation: MoveUpDown 1.5s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1.5rem);
+    }
+}
+
+.fixed {
+    position: fixed !important;
+    top: 0% !important;
+    right: 0% !important;
+    z-index: 9;
+}
+
+.active {
+    background-color: #22A39F;
+}
+
+.nav-link {
+    padding: 1rem !important;
+    font-weight: 550;
+    color: #fff !important;
+    font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        padding: 0;
+        margin: 4rem 5rem 0 0;
+        z-index: 5;
+    }
+    .navbar .container-fluid {
+        padding: 0;
+    }
+    .navbar-nav {
+        flex-direction: column !important;
+    }
+    .nav-link {
+        padding: 2rem 1rem !important;
+    }
 }
 
 .tiles {
     display: grid;
     background-color: #eee;
     max-width: 50%;
-    margin: auto;
+    margin: 3rem auto 10rem;
+    gap: 3rem;
 }
 
 .tiles h2 {
@@ -110,6 +163,19 @@ h5 {
     margin: 1rem 0.25rem;
 }
 
+.increase {
+    animation: grow 2s;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 98%;
+    }
+}
+
 .card {
     margin: 2rem auto 5rem;
     width: 80%;
@@ -130,10 +196,10 @@ footer a {
 }
 
 footer a:hover {
-    color: #f1f1f1;
+    color: #ccc;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 991px) {
     .top {
         background: no-repeat center right fixed url(./images/gojosatoru_by_marcechan_fullview.jpg);
         background-size: cover;
