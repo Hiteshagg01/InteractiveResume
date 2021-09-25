@@ -15,48 +15,27 @@ document.querySelectorAll('.progress').forEach(bar => {
 
 $(document).ready(() => {
     $('.headsup').fadeIn(1500).removeClass('hidden');
-    $('.indicator').fadeIn(1500).removeClass('hidden');
+    setTimeout(() => {
+        $('.indicator').fadeIn(1500).removeClass('hidden');
+    }, 1000);
 });
 
-const navigationBar = document.querySelector('nav');
-const headsupObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            navigationBar.classList.remove('fixed');
-            return;
-        }
-        navigationBar.classList.add('fixed')
-    });
-});
-headsupObserver.observe(document.querySelector('.top'));
 
-window.addEventListener('resize', () => {
-    if ($(window).width() < 992) {
-        navigationBar.style.left = '0';
-    } else {
-        navigationBar.style.left = 'auto';
-    }
-});
+const observeingDiv = document.querySelectorAll('div.tile-card');
+const targetNavLinks = document.querySelectorAll('a.nav-link');
 
-const activeNavLink = document.querySelector('a[href="#profile"]');
+window.onscroll = () => {
+    observeingDiv.forEach(div => {
+        var top = window.scrollY;
+        var offset = div.offsetTop - 150;
+        var height = div.offsetHeight;
+        var id = div.getAttribute('id');
 
-const navigationSpy = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            document.querySelector(`a[href="#${entry.target.id}"]`).classList.add('active')
-        } else {
-            document.querySelector(`a[href="#${entry.target.id}"]`).classList.remove('active')
+        if (top >= offset && top < offset + height) {
+            targetNavLinks.forEach(link => {
+                link.classList.remove('active');
+                document.querySelector(`a[href="#${id}"]`).classList.add('active');
+            });
         }
     });
-}, {
-    root: null,
-    rootMargin: '0px',
-    threshold: '0.5'
 }
-);
-
-navigationSpy.observe(document.getElementById('profile'));
-navigationSpy.observe(document.getElementById('experience'));
-navigationSpy.observe(document.getElementById('abilities'));
-navigationSpy.observe(document.getElementById('projects'));
-navigationSpy.observe(document.getElementById('contact'));
