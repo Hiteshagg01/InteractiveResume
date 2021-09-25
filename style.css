@@ -66,12 +66,13 @@ hr {
     left: 0;
     right: 0;
     bottom: 0;
+    height: calc(100vh);
     background-color: #22A39F;
     opacity: 0.75;
     z-index: 2;
 }
 
-.indicator {
+.indicator a {
     position: absolute;
     z-index: 4;
     bottom: 1rem;
@@ -125,7 +126,7 @@ hr {
 .tiles {
     background-color: #eee;
     max-width: 50%;
-    margin: 6rem auto;
+    margin: 2rem auto 6rem;
 }
 
 .tiles h2 {
@@ -142,7 +143,7 @@ hr {
 }
 
 .tile-card {
-    margin: 3rem auto;
+    padding: 4rem 0;
 }
 
 .tile-card h3 {
@@ -225,8 +226,9 @@ footer a:hover {
 
 @media (max-width: 991px) {
     .top {
-        background: no-repeat center right fixed url(./images/gojosatoru_by_marcechan_fullview.jpg);
+        background: url(./images/gojosatoru_by_marcechan_fullview.jpg);
         background-size: cover;
+        height: calc(100vh);
     }
     .headsup h1 {
         font-size: 2.5rem;
@@ -239,6 +241,9 @@ footer a:hover {
         top: 0;
         right: 0;
         z-index: 5;
+    }
+    #navbarSupportedContent {
+        margin-top: 0.5rem;
     }
     .tiles {
         max-width: 90%;

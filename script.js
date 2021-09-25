@@ -14,8 +14,9 @@ document.querySelectorAll('.progress').forEach(bar => {
 });
 
 $(document).ready(() => {
-    $('.headsup').fadeIn(1500).removeClass('hidden');
+    $('.master-main').fadeIn(1500).removeClass('hidden');
     setTimeout(() => {
+        $('.headsup').fadeIn(1500).removeClass('hidden');
         $('.indicator').fadeIn(1500).removeClass('hidden');
     }, 1000);
 });
@@ -34,7 +35,7 @@ window.onscroll = () => {
         if (top >= offset && top < offset + height) {
             targetNavLinks.forEach(link => {
                 link.classList.remove('active');
-                document.querySelector(`a[href="#${id}"]`).classList.add('active');
+                document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
             });
         }
     });
