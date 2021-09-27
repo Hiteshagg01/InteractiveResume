@@ -7,6 +7,10 @@ const increaseObserver = new IntersectionObserver(entries => {
         }
         // enrtry.target.classList.remove('increase');
     });
+}, {
+    root: null,
+    rootMargin: '48px',
+    threshold: 0
 });
 
 document.querySelectorAll('.progress').forEach(bar => {

@@ -9,6 +9,7 @@
 body {
     background-color: #eee;
     line-height: 1.75;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 h5 {
@@ -66,7 +67,7 @@ hr {
     left: 0;
     right: 0;
     bottom: 0;
-    height: calc(100vh);
+    height: 100vh;
     background-color: #22A39F;
     opacity: 0.75;
     z-index: 2;
@@ -124,7 +125,7 @@ hr {
 }
 
 .tiles {
-    background-color: #eee;
+    background-color: rgba(238, 238, 238, 0.4);
     max-width: 50%;
     margin: 2rem auto 6rem;
 }
@@ -188,6 +189,7 @@ hr {
     overflow: hidden;
     z-index: 2;
     background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .project-cont hr {
@@ -226,7 +228,7 @@ footer a:hover {
 
 @media (max-width: 991px) {
     .top {
-        background: url(./images/gojosatoru_by_marcechan_fullview.jpg);
+        background: no-repeat center url(./images/gojosatoru_by_marcechan_fullview.jpg);
         background-size: cover;
         height: calc(100vh);
     }
