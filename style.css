@@ -73,13 +73,11 @@ hr {
     z-index: 2;
 }
 
-.indicator a {
+.indicator {
     position: absolute;
     z-index: 4;
     bottom: 1rem;
-    right: 0;
-    left: 0;
-    color: #fff;
+    left: calc(50vw - 24px);
     animation: MoveUpDown 1.5s linear infinite;
 }
 
@@ -126,7 +124,7 @@ hr {
 
 .tiles {
     background-color: rgba(238, 238, 238, 0.4);
-    max-width: 50%;
+    max-width: 60rem;
     margin: 2rem auto 6rem;
 }
 
@@ -144,7 +142,7 @@ hr {
 }
 
 .tile-card {
-    padding: 4rem 0;
+    padding-top: 5rem;
 }
 
 .tile-card h3 {
